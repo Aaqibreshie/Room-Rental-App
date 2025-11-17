@@ -1,0 +1,26 @@
+2025-11-17 17:04:52 [ERROR]: uncaughtException: userSchema is not defined
+ReferenceError: userSchema is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/models/User.js:116:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: userSchema is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/models/User.js:116:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-17 17:09:39 [ERROR]: uncaughtException: userSchema is not defined
+ReferenceError: userSchema is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/models/User.js:116:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: userSchema is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/models/User.js:116:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
