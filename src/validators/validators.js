@@ -9,7 +9,8 @@ export const handleValidationErrors = (req, res, next) => {
       .array()
       .map((err) => `${err.param}: ${err.msg}`)
       .join(", ");
-    throw new ApiError(errorMessages, 400);
+
+    return next(new ApiError(errorMessages, 400)); // ✔ cleaner
   }
   next();
 };

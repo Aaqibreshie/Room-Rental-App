@@ -1,5 +1,5 @@
 import express from "express";
-import { isAuthenticated, isAdmin } from "../middleware/auth.middleware.js";
+import { isAuthenticated, isAdmin } from "../middleware/authMiddleware.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import {
   getAllUsers,

@@ -1,4 +1,4 @@
-import { isAuthenticated } from "../middleware/auth.middleware.js";
+import { isAuthenticated } from "../middleware/authMiddleware.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import {
   createReview,

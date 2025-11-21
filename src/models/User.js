@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import bcryptjs from "bcryptjs";
 
-const MyUser = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     fullName: {
       type: String,
@@ -58,83 +58,39 @@ const MyUser = new mongoose.Schema(
       zipCode: { type: String, default: "" },
       country: { type: String, default: "" },
     },
-    savedRooms: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Room",
-      },
-    ],
-    savedBuildings: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Building",
-      },
-    ],
-    isBanned: {
-      type: Boolean,
-      default: false,
-    },
-    banReason: {
-      type: String,
-      default: null,
-    },
-    bannedAt: {
-      type: Date,
-      default: null,
-    },
-    isEmailVerified: {
-      type: Boolean,
-      default: false,
-    },
-    emailVerifiedAt: {
-      type: Date,
-      default: null,
-    },
-    lastLogin: {
-      type: Date,
-      default: null,
-    },
-    resetPasswordToken: {
-      type: String,
-      default: null,
-    },
-    resetPasswordExpire: {
-      type: Date,
-      default: null,
-    },
-    refreshToken: {
-      type: String,
-      default: null,
-    },
+    savedRooms: [{ type: mongoose.Schema.Types.ObjectId, ref: "Room" }],
+    savedBuildings: [{ type: mongoose.Schema.Types.ObjectId, ref: "Building" }],
+    isBanned: { type: Boolean, default: false },
+    banReason: { type: String, default: null },
+    bannedAt: { type: Date, default: null },
+    isEmailVerified: { type: Boolean, default: false },
+    emailVerifiedAt: { type: Date, default: null },
+    lastLogin: { type: Date, default: null },
+    resetPasswordToken: { type: String, default: null },
+    resetPasswordExpire: { type: Date, default: null },
+    refreshToken: { type: String, default: null },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
-// Create indexes - NO index: true in fields above
-userSchema.index({ email: 1 });
-userSchema.index({ phone: 1 });
+// indexes
+// userSchema.index({ email: 1 });
+// userSchema.index({ phone: 1 });
 
-// Hash password before saving
+// hash password
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
-
-  try {
-    const salt = await bcryptjs.genSalt(10);
-    this.password = await bcryptjs.hash(this.password, salt);
-    next();
-  } catch (error) {
-    next(error);
-  }
+  const salt = await bcryptjs.genSalt(10);
+  this.password = await bcryptjs.hash(this.password, salt);
+  next();
 });
 
-// Compare password method
+// compare password
 userSchema.methods.comparePassword = async function (enteredPassword) {
   return await bcryptjs.compare(enteredPassword, this.password);
 };
 
-// Get public profile (hide sensitive data)
+// hide fields
 userSchema.methods.getPublicProfile = function () {
   const user = this.toObject();
   delete user.password;
@@ -144,6 +100,6 @@ userSchema.methods.getPublicProfile = function () {
   return user;
 };
 
-const User = mongoose.model("User", MyUser);
+const User = mongoose.model("User", userSchema);
 
 export default User;

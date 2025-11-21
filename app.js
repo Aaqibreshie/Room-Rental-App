@@ -3,24 +3,25 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import compression from "compression";
-import config from "./config/config.js";
+import config from "./src/config/config.js";
 import {
   securityHeaders,
   sanitizeData,
   preventParamPollution,
-} from "./middleware/security.middleware.js";
-import { errorHandler } from "./middleware/error.middleware.js";
+} from "./src/middleware/security.middleware.js";
+import { errorHandler } from "./src/middleware/error.middleware.js";
 import rateLimit from "express-rate-limit";
-import logger from "./utils/logger.js";
+import logger from "./src/utils/logger.js";
+import server from "./server.js";
 
 // Import Routes
-import authRoutes from "./routes/auth.routes.js";
-import userRoutes from "./routes/user.routes.js";
-import roomRoutes from "./routes/room.routes.js";
-import buildingRoutes from "./routes/building.routes.js";
-import bookingRoutes from "./routes/booking.routes.js";
-import paymentRoutes from "./routes/payment.routes.js";
-import reviewRoutes from "./routes/review.routes.js";
+import authRoutes from "./src/routes/authRoutes.js";
+import userRoutes from "./src/routes/user.routes.js";
+import roomRoutes from "./src/routes/room.routes.js";
+import buildingRoutes from "./src/routes/building.routes.js";
+import bookingRoutes from "./src/routes/booking.routes.js";
+import paymentRoutes from "./src/routes/payment.routes.js";
+import reviewRoutes from "./src/routes/review.routes.js";
 
 const app = express();
 

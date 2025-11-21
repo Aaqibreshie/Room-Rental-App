@@ -8,18 +8,17 @@ import {
   verifyRefreshToken,
 } from "../utils/jwt.js";
 import { sendEmail } from "../services/email.service.js";
-import crypto from "crypto";
+// import crypto from "crypto";
 
-/**
- * Register User
- */
 export const registerUser = asyncHandler(async (req, res, next) => {
   const { fullName, email, phone, password, role } = req.body;
+  console.log(fullName, email);
 
-  // Check if user already exists
+  // Check if user exists
   const existingUser = await User.findOne({
     $or: [{ email: email.toLowerCase() }, { phone }],
   });
+
   if (existingUser) {
     throw new ApiError("Email or phone number already registered", 409);
   }
@@ -45,7 +44,7 @@ export const registerUser = asyncHandler(async (req, res, next) => {
   user.refreshToken = refreshToken;
   await user.save({ validateBeforeSave: false });
 
-  // Send welcome email
+  // Send welcome email (safe)
   try {
     await sendEmail({
       email: user.email,
@@ -61,7 +60,8 @@ export const registerUser = asyncHandler(async (req, res, next) => {
     console.log("Email send failed but user registered");
   }
 
-  res.status(201).json(
+  // FINAL RESPONSE ONLY ONCE
+  return res.status(201).json(
     new ApiResponse(
       201,
       {

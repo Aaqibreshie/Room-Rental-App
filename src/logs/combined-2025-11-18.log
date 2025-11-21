@@ -1,0 +1,104 @@
+2025-11-18 11:28:22 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:28:27 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:28:32 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:28:37 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:28:42 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:28:47 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:28:52 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:28:57 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:02 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:07 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:12 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:17 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:23 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:28 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:33 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:38 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:43 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:48 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:53 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:29:58 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:30:03 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:30:08 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:30:13 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-18 11:30:20 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:30:20 [INFO]: Database: test 
+2025-11-18 11:32:48 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:32:48 [INFO]: Database: test 
+2025-11-18 11:36:30 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:36:30 [INFO]: Database: test 
+2025-11-18 11:36:38 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:36:38 [INFO]: Database: test 
+2025-11-18 11:36:44 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:36:44 [INFO]: Database: test 
+2025-11-18 11:36:49 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:36:49 [INFO]: Database: test 
+2025-11-18 11:38:30 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:38:30 [INFO]: Database: test 
+2025-11-18 11:39:04 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:39:04 [INFO]: Database: test 
+2025-11-18 11:39:25 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:39:25 [INFO]: Database: test 
+2025-11-18 11:40:42 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:40:42 [INFO]: Database: test 
+2025-11-18 11:47:22 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:47:22 [INFO]: Database: test 
+2025-11-18 11:52:54 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:52:54 [INFO]: Database: test 
+2025-11-18 11:58:40 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 11:58:40 [INFO]: Database: test 
+2025-11-18 12:04:00 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:04:00 [INFO]: Database: test 
+2025-11-18 12:08:05 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:08:05 [INFO]: Database: test 
+2025-11-18 12:10:11 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:10:11 [INFO]: Database: test 
+2025-11-18 12:10:45 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:10:45 [INFO]: Database: test 
+2025-11-18 12:13:13 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:13:13 [INFO]: Database: test 
+2025-11-18 12:14:23 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:14:23 [INFO]: Database: test 
+2025-11-18 12:15:33 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:15:33 [INFO]: Database: test 
+2025-11-18 12:17:42 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:17:42 [INFO]: Database: test 
+2025-11-18 12:18:26 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:18:26 [INFO]: Database: test 
+2025-11-18 12:18:49 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:18:49 [INFO]: Database: test 
+2025-11-18 12:19:56 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:19:56 [INFO]: Database: test 
+2025-11-18 12:22:29 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:22:29 [INFO]: Database: test 
+2025-11-18 12:22:56 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:22:56 [INFO]: Database: test 
+2025-11-18 12:26:28 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:26:28 [INFO]: Database: test 
+2025-11-18 12:26:54 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:26:54 [INFO]: Database: test 
+2025-11-18 12:28:42 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-18 12:28:42 [INFO]: Database: test 
+2025-11-18 18:02:52 [WARN]: ⚠️ MongoDB disconnected 
+2025-11-18 18:03:27 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-18 18:03:27 [INFO]: Database: test 
+2025-11-18 18:03:41 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-18 18:03:41 [INFO]: Database: test 
+2025-11-18 18:04:28 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-18 18:04:28 [INFO]: Database: test 
+2025-11-18 18:05:30 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-18 18:05:30 [INFO]: Database: test 
+2025-11-18 18:06:35 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-18 18:06:35 [INFO]: Database: test 
+2025-11-18 18:07:22 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-18 18:07:22 [INFO]: Database: test 
+2025-11-18 18:08:48 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-18 18:08:48 [INFO]: Database: test 
+2025-11-18 18:12:24 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-18 18:12:24 [INFO]: Database: test 
+2025-11-18 18:13:01 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-18 18:13:01 [INFO]: Database: test 
+2025-11-18 18:15:51 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-18 18:15:51 [INFO]: Database: test 
+2025-11-18 18:29:58 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-18 18:29:58 [INFO]: Database: test 

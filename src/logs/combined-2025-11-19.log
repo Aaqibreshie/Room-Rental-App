@@ -1,0 +1,71 @@
+2025-11-19 10:49:37 [WARN]: ⚠️ MongoDB disconnected 
+2025-11-19 10:53:47 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 10:53:47 [INFO]: Database: test 
+2025-11-19 11:08:28 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 11:08:28 [INFO]: Database: test 
+2025-11-19 11:10:12 [ERROR]: Error sending email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2985c2346b8sm193349095ad.16 - gsmtp 
+Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2985c2346b8sm193349095ad.16 - gsmtp
+    at SMTPConnection._formatError (C:\Users\Asus\Desktop\room-rental-backend\node_modules\nodemailer\lib\smtp-connection\index.js:809:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Asus\Desktop\room-rental-backend\node_modules\nodemailer\lib\smtp-connection\index.js:1595:34)
+    at SMTPConnection.<anonymous> (C:\Users\Asus\Desktop\room-rental-backend\node_modules\nodemailer\lib\smtp-connection\index.js:556:26)
+    at SMTPConnection._processResponse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\nodemailer\lib\smtp-connection\index.js:993:20)
+    at SMTPConnection._onData (C:\Users\Asus\Desktop\room-rental-backend\node_modules\nodemailer\lib\smtp-connection\index.js:774:14)
+    at SMTPConnection._onSocketData (C:\Users\Asus\Desktop\room-rental-backend\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Readable.push (node:internal/streams/readable:390:5)
+2025-11-19 11:16:08 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-19 11:16:08 [INFO]: Database: test 
+2025-11-19 11:17:05 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 11:17:05 [INFO]: Database: test 
+2025-11-19 11:19:23 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 11:19:23 [INFO]: Database: test 
+2025-11-19 11:20:41 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 11:20:41 [INFO]: Database: test 
+2025-11-19 11:20:55 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 11:20:55 [INFO]: Database: test 
+2025-11-19 11:32:42 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 11:32:42 [INFO]: Database: test 
+2025-11-19 11:34:28 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 11:34:28 [INFO]: Database: test 
+2025-11-19 11:37:58 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-19 11:45:21 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-19 11:45:21 [INFO]: Database: test 
+2025-11-19 11:47:34 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 11:47:34 [INFO]: Database: test 
+2025-11-19 11:51:42 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 11:51:42 [INFO]: Database: test 
+2025-11-19 11:57:28 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-19 11:57:28 [INFO]: Database: test 
+2025-11-19 11:59:35 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 11:59:35 [INFO]: Database: test 
+2025-11-19 12:06:22 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-11-19 12:06:22 [INFO]: Database: test 
+2025-11-19 12:10:58 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 12:10:58 [INFO]: Database: test 
+2025-11-19 15:11:07 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 15:11:07 [INFO]: Database: test 
+2025-11-19 15:14:07 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 15:14:07 [INFO]: Database: test 
+2025-11-19 15:14:26 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 15:14:26 [INFO]: Database: test 
+2025-11-19 15:14:40 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 15:14:40 [INFO]: Database: test 
+2025-11-19 15:54:18 [WARN]: ⚠️ MongoDB disconnected 
+2025-11-19 15:54:57 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 15:54:57 [INFO]: Database: test 
+2025-11-19 15:55:35 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 15:55:35 [INFO]: Database: test 
+2025-11-19 15:55:40 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 15:55:40 [INFO]: Database: test 
+2025-11-19 15:56:41 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 15:56:41 [INFO]: Database: test 
+2025-11-19 15:56:46 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 15:56:46 [INFO]: Database: test 
+2025-11-19 15:58:29 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-19 15:58:29 [INFO]: Database: test 
+2025-11-19 15:59:25 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-11-19 15:59:25 [INFO]: Database: test 
