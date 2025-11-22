@@ -1,0 +1,137 @@
+2025-11-22 11:48:32 [ERROR]: uncaughtException: express is not defined
+ReferenceError: express is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/review.routes.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: express is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/review.routes.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-22 11:48:46 [ERROR]: uncaughtException: express is not defined
+ReferenceError: express is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/review.routes.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: express is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/review.routes.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-22 11:49:54 [ERROR]: uncaughtException: express is not defined
+ReferenceError: express is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/review.routes.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: express is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/review.routes.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-22 11:50:53 [ERROR]: uncaughtException: Cannot access 'app' before initialization
+ReferenceError: Cannot access 'app' before initialization
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:31:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: Cannot access 'app' before initialization
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:31:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-22 11:53:36 [ERROR]: uncaughtException: securityHeaders is not defined
+ReferenceError: securityHeaders is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:38:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: securityHeaders is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:38:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-22 11:53:51 [ERROR]: uncaughtException: securityHeaders is not defined
+ReferenceError: securityHeaders is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:38:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: securityHeaders is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:38:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-22 11:58:39 [ERROR]: uncaughtException: rateLimit is not defined
+ReferenceError: rateLimit is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:53:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: rateLimit is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:53:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-11-22 12:02:29 [ERROR]: uncaughtException: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:398:19)
+    at app.<anonymous> (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:222:21)
+    at Array.forEach (<anonymous>)
+    at app.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:219:7) 
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:398:19)
+    at app.<anonymous> (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:222:21)
+    at Array.forEach (<anonymous>)
+    at app.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:219:7)
+2025-11-22 12:03:13 [ERROR]: uncaughtException: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:398:19)
+    at app.<anonymous> (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:222:21)
+    at Array.forEach (<anonymous>)
+    at app.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:219:7) 
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:398:19)
+    at app.<anonymous> (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:222:21)
+    at Array.forEach (<anonymous>)
+    at app.use (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:219:7)

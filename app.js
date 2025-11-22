@@ -1,20 +1,24 @@
+// app.js — PRODUCTION READY
+
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import compression from "compression";
+import rateLimit from "express-rate-limit";
+
 import config from "./src/config/config.js";
+
+// Security middlewares
 import {
   securityHeaders,
   sanitizeData,
   preventParamPollution,
 } from "./src/middleware/security.middleware.js";
-import { errorHandler } from "./src/middleware/error.middleware.js";
-import rateLimit from "express-rate-limit";
-import logger from "./src/utils/logger.js";
-import server from "./server.js";
 
-// Import Routes
+import { errorHandler } from "./src/middleware/error.middleware.js";
+
+// Routes
 import authRoutes from "./src/routes/authRoutes.js";
 import userRoutes from "./src/routes/user.routes.js";
 import roomRoutes from "./src/routes/room.routes.js";
@@ -25,81 +29,81 @@ import reviewRoutes from "./src/routes/review.routes.js";
 
 const app = express();
 
-// ===== MIDDLEWARE SETUP =====
+// ---------------------------
+// GLOBAL MIDDLEWARES
+// ---------------------------
 
-// Trust proxy
-// app.set("trust proxy", 1);
+// Trust reverse proxies (render, vercel, nginx etc.)
+app.set("trust proxy", 1);
+
+// Security headers
+app.use(securityHeaders);
+
+// Sanitize from NoSQL injection
+app.use(sanitizeData);
+
+// Prevent parameter pollution
+app.use(preventParamPollution);
+
+// CORS Setup
+app.use(
+  cors({
+    origin: config.FRONTEND_URL,
+    credentials: true,
+  })
+);
 
 // Logging
-// app.use(morgan("dev"));
+app.use(morgan(config.NODE_ENV === "production" ? "combined" : "dev"));
 
-// Security Middleware
-// app.use(securityHeaders);
-// app.use(sanitizeData);
-// app.use(preventParamPollution);
+// Enable compression (gzip)
+app.use(compression());
 
-// CORS Configuration
-// app.use(
-//   cors({
-//     origin: config.FRONTEND_URL,
-//     credentials: true,
-//     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//   })
-// );
+// Request body parsing
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
-// Compression
-// app.use(compression());
-
-// Body Parser
-// app.use(express.json({ limit: "10mb" }));
-// app.use(express.urlencoded({ limit: "10mb", extended: true }));
-
-// Cookie Parser
+// Cookies
 app.use(cookieParser());
 
-// Rate Limiting
-// const limiter = rateLimit({
-//   windowMs: config.RATE_LIMIT_WINDOW_MS,
-//   max: config.RATE_LIMIT_MAX_REQUESTS,
-//   message: "Too many requests from this IP, please try again later.",
-//   standardHeaders: true,
-//   legacyHeaders: false,
-// });
+// Rate limiting for API security
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 200, // 200 requests / 15 min
+  message: "Too many requests. Please try again later.",
+});
+app.use("/api", limiter);
 
-// app.use("/api/", limiter);
+// ---------------------------
+// ROUTES
+// ---------------------------
 
-// ===== API ROUTES =====
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Server running 🚀" });
+});
 
-// Health Check
-// app.get("/api/v1/health", (req, res) => {
-//   res.status(200).json({
-//     success: true,
-//     message: "API is running",
-//     timestamp: new Date().toISOString(),
-//   });
-// });
+app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/rooms", roomRoutes);
+app.use("/api/buildings", buildingRoutes);
+app.use("/api/bookings", bookingRoutes);
+app.use("/api/payments", paymentRoutes);
+app.use("/api/reviews", reviewRoutes);
 
-// API Routes
-// app.use(`/api/${config.API_VERSION}/auth`, authRoutes);
-// app.use(`/api/${config.API_VERSION}/users`, userRoutes);
-// app.use(`/api/${config.API_VERSION}/rooms`, roomRoutes);
-// app.use(`/api/${config.API_VERSION}/buildings`, buildingRoutes);
-// app.use(`/api/${config.API_VERSION}/bookings`, bookingRoutes);
-// app.use(`/api/${config.API_VERSION}/payments`, paymentRoutes);
-// app.use(`/api/${config.API_VERSION}/reviews`, reviewRoutes);
+// ---------------------------
+// 404 ROUTE HANDLER
+// ---------------------------
+app.use("*", (req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "Route not found",
+    path: req.originalUrl,
+  });
+});
 
-// ===== 404 HANDLER =====
-// app.use("*", (req, res) => {
-//   logger.warn(`404 - Route not found: ${req.originalUrl}`);
-//   res.status(404).json({
-//     success: false,
-//     message: "Route not found",
-//     path: req.originalUrl,
-//   });
-// });
-
-// ===== ERROR HANDLER =====
-// app.use(errorHandler);
+// ---------------------------
+// ERROR HANDLER
+// ---------------------------
+app.use(errorHandler);
 
 export default app;
