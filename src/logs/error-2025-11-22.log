@@ -1,0 +1,3 @@
+2025-11-22 14:43:00 [ERROR]: Error sending email: connect ETIMEDOUT 142.251.10.109:465 
+Error: connect ETIMEDOUT 142.251.10.109:465
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)

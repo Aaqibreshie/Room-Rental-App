@@ -6,10 +6,10 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import morgan from "morgan";
 import compression from "compression";
-
+// import mongoSanitize from "express-mongo-sanitize";
+import { safeSanitize } from "./src/middleware/security.middleware.js";
 import {
   securityHeaders,
-  sanitizeData,
   preventParamPollution,
 } from "./src/middleware/security.middleware.js";
 import { errorHandler } from "./src/middleware/error.middleware.js";
@@ -36,7 +36,10 @@ app.use(morgan("dev"));
 
 // Security Middleware
 app.use(securityHeaders);
-app.use(sanitizeData);
+// app.use(sanitizeData);
+
+app.use(safeSanitize);
+
 app.use(preventParamPollution);
 // CORS Setup
 app.use(
@@ -70,8 +73,8 @@ app.use("/api", limiter);
 //   return res.status(200).json("hello from server");
 // });
 // ---------------------------
-// ROUTES
-//
+//          ROUTES
+// ---------------------------
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Server running 🚀" });
 });
