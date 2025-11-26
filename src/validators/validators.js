@@ -140,15 +140,15 @@ export const validateCreateBuilding = [
     .isInt({ min: 1 })
     .withMessage("Building must have at least 1 floor"),
 
-  body("location.coordinates")
-    .isArray({ min: 2, max: 2 })
-    .withMessage("Coordinates must be [longitude, latitude]")
-    .custom((value) => {
-      if (value[0] < -180 || value[0] > 180)
-        throw new Error("Invalid longitude");
-      if (value[1] < -90 || value[1] > 90) throw new Error("Invalid latitude");
-      return true;
-    }),
+  // body("location.coordinates")
+  //   .isArray({ min: 2, max: 2 })
+  //   .withMessage("Coordinates must be [longitude, latitude]")
+  //   .custom((value) => {
+  //     if (value[0] < -180 || value[0] > 180)
+  //       throw new Error("Invalid longitude");
+  //     if (value[1] < -90 || value[1] > 90) throw new Error("Invalid latitude");
+  //     return true;
+  //   }),
 
   handleValidationErrors,
 ];

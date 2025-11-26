@@ -376,3 +376,16 @@ Error: connect ETIMEDOUT 142.251.10.109:465
       ╚════════════════════════════════════════════╝
        
 2025-11-22 19:36:07 [WARN]: ⚠️ MongoDB disconnected 
+2025-11-22 21:35:15 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-11-22 21:35:15 [INFO]: Database: test 
+2025-11-22 21:35:15 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-11-22 21:47:07 [WARN]: ⚠️ MongoDB disconnected 

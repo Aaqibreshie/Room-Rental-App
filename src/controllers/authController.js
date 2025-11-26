@@ -267,26 +267,27 @@ export const forgotPassword = asyncHandler(async (req, res, next) => {
   }
 
   // Generate reset token
-  const resetToken = crypto.randomBytes(32).toString("hex");
+  // const resetToken = crypto.randomBytes(32).toString("hex");
 
   // Hash token
-  user.resetPasswordToken = crypto
-    .createHash("sha256")
-    .update(resetToken)
-    .digest("hex");
+  // user.resetPasswordToken = crypto
+  //   .createHash("sha256")
+  //   .update(resetToken)
+  //   .digest("hex");
 
-  user.resetPasswordExpire = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
-  await user.save({ validateBeforeSave: false });
+  // user.resetPasswordExpire = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
+  // await user.save({ validateBeforeSave: false });
 
   // Create reset URL
   const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
 
   try {
     await sendEmail({
-      email: user.email,
+      from: EMAIL_USER,
+      to: user.email,
       subject: "Room Rental - Password Reset Link",
-      template: "forgotPassword",
-      data: {
+      // template: "forgotPassword",
+      text: {
         name: user.fullName,
         resetUrl,
         expiryTime: "10 minutes",

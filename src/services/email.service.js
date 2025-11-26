@@ -4,7 +4,7 @@ import logger from "../utils/logger.js";
 
 // Create transporter for email sending
 const transporter = nodemailer.createTransport({
-  service: config.EMAIL_SERVICE,
+  // service: config.EMAIL_SERVICE,
   host: config.EMAIL_HOST,
   port: config.EMAIL_PORT,
   secure: true,

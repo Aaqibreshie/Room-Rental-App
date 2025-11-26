@@ -7,38 +7,31 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 /**
  * Get All Buildings (Public)
  */
-export const getAllBuildings = asyncHandler(async (req, res, next) => {
-  const {
-    page = 1,
-    limit = 10,
-    city,
-    minRent,
-    maxRent,
-    furnishingStatus,
-  } = req.query;
+export const getAllBuildings = asyncHandler(async (req, res) => {
+  const { page = 1, limit = 10, city, minRent, maxRent } = req.query;
 
-  const filter = { status: "active" };
+  const filter = { isActive: true };
 
   if (city) filter["address.city"] = city;
-  if (furnishingStatus) filter.furnishingStatus = furnishingStatus;
 
+  // FIXED: Rent filter should match schema fields
   if (minRent || maxRent) {
-    filter.averageRent = {};
-    if (minRent) filter.averageRent.$gte = Number(minRent);
-    if (maxRent) filter.averageRent.$lte = Number(maxRent);
+    filter["rooms.rentPerMonth"] = {};
+    if (minRent) filter["rooms.rentPerMonth"].$gte = Number(minRent);
+    if (maxRent) filter["rooms.rentPerMonth"].$lte = Number(maxRent);
   }
 
   const skip = (page - 1) * limit;
 
   const buildings = await Building.find(filter)
     .populate("owner", "fullName email phone profilePicture")
-    .limit(Number(limit))
+    .sort({ createdAt: -1 })
     .skip(skip)
-    .sort({ createdAt: -1 });
+    .limit(Number(limit));
 
   const total = await Building.countDocuments(filter);
 
-  res.status(200).json(
+  return res.status(200).json(
     new ApiResponse(
       200,
       {
@@ -57,19 +50,17 @@ export const getAllBuildings = asyncHandler(async (req, res, next) => {
 /**
  * Get Building by ID
  */
-export const getBuildingById = asyncHandler(async (req, res, next) => {
-  const building = await Building.findById(req.params.id)
-    .populate("owner", "fullName email phone profilePicture bio")
-    .populate({
-      path: "rooms",
-      select: "roomNumber title rentPerMonth amenities isAvailable",
-    });
+export const getBuildingById = asyncHandler(async (req, res) => {
+  const building = await Building.findById(req.params.id).populate(
+    "owner",
+    "fullName email phone profilePicture bio"
+  );
 
   if (!building) {
     throw new ApiError("Building not found", 404);
   }
 
-  res
+  return res
     .status(200)
     .json(new ApiResponse(200, building, "Building retrieved successfully"));
 });
@@ -77,28 +68,32 @@ export const getBuildingById = asyncHandler(async (req, res, next) => {
 /**
  * Create Building (Landlord Only)
  */
-export const createBuilding = asyncHandler(async (req, res, next) => {
+export const createBuilding = asyncHandler(async (req, res) => {
   const {
-    buildingName,
+    name,
+    buildingType,
     address,
+    // location,
     totalFloors,
     totalRooms,
     description,
     amenities,
     images,
     yearBuilt,
-    buildingType,
-    legalStatus,
+    contactNumbers,
+    rules,
   } = req.body;
 
-  // Verify required fields
-  if (!buildingName || !address) {
-    throw new ApiError("Building name and address are required", 400);
+  // if (!name || !address || !location)
+  if (!name || !address) {
+    throw new ApiError("Name and address  are required", 400);
   }
 
   const building = new Building({
-    buildingName,
+    name,
+    buildingType,
     address,
+    // location,
     owner: req.user._id,
     totalFloors,
     totalRooms,
@@ -106,13 +101,13 @@ export const createBuilding = asyncHandler(async (req, res, next) => {
     amenities,
     images,
     yearBuilt,
-    buildingType,
-    legalStatus,
+    contactNumbers,
+    rules,
   });
 
   await building.save();
 
-  res
+  return res
     .status(201)
     .json(new ApiResponse(201, building, "Building created successfully"));
 });
@@ -120,12 +115,10 @@ export const createBuilding = asyncHandler(async (req, res, next) => {
 /**
  * Update Building (Landlord Only)
  */
-export const updateBuilding = asyncHandler(async (req, res, next) => {
+export const updateBuilding = asyncHandler(async (req, res) => {
   let building = await Building.findById(req.params.id);
 
-  if (!building) {
-    throw new ApiError("Building not found", 404);
-  }
+  if (!building) throw new ApiError("Building not found", 404);
 
   if (building.owner.toString() !== req.user._id.toString()) {
     throw new ApiError("Unauthorized: You do not own this building", 403);
@@ -136,7 +129,7 @@ export const updateBuilding = asyncHandler(async (req, res, next) => {
     runValidators: true,
   });
 
-  res
+  return res
     .status(200)
     .json(new ApiResponse(200, building, "Building updated successfully"));
 });
@@ -144,29 +137,18 @@ export const updateBuilding = asyncHandler(async (req, res, next) => {
 /**
  * Delete Building (Landlord Only)
  */
-export const deleteBuilding = asyncHandler(async (req, res, next) => {
+export const deleteBuilding = asyncHandler(async (req, res) => {
   const building = await Building.findById(req.params.id);
 
-  if (!building) {
-    throw new ApiError("Building not found", 404);
-  }
+  if (!building) throw new ApiError("Building not found", 404);
 
   if (building.owner.toString() !== req.user._id.toString()) {
     throw new ApiError("Unauthorized: You do not own this building", 403);
   }
 
-  // Check if building has active rooms
-  const activeRooms = await Building.findById(req.params.id).populate("rooms");
-  if (activeRooms.rooms.length > 0) {
-    throw new ApiError(
-      "Cannot delete building with active rooms. Delete all rooms first.",
-      400
-    );
-  }
-
   await Building.findByIdAndDelete(req.params.id);
 
-  res
+  return res
     .status(200)
     .json(new ApiResponse(200, null, "Building deleted successfully"));
 });
@@ -174,15 +156,12 @@ export const deleteBuilding = asyncHandler(async (req, res, next) => {
 /**
  * Get Landlord's Buildings
  */
-export const getLandlordBuildings = asyncHandler(async (req, res, next) => {
-  const buildings = await Building.find({ owner: req.user._id })
-    .populate({
-      path: "rooms",
-      select: "roomNumber title rentPerMonth isAvailable",
-    })
-    .sort({ createdAt: -1 });
+export const getLandlordBuildings = asyncHandler(async (req, res) => {
+  const buildings = await Building.find({ owner: req.user._id }).sort({
+    createdAt: -1,
+  });
 
-  res
+  return res
     .status(200)
     .json(
       new ApiResponse(200, buildings, "Your buildings retrieved successfully")
@@ -192,22 +171,22 @@ export const getLandlordBuildings = asyncHandler(async (req, res, next) => {
 /**
  * Save Building (Tenant)
  */
-export const saveBuilding = asyncHandler(async (req, res, next) => {
+export const saveBuilding = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
+
+  if (!user) throw new ApiError("User not found", 404);
+
   const buildingId = req.params.id;
 
-  // Check if building exists
   const building = await Building.findById(buildingId);
-  if (!building) {
-    throw new ApiError("Building not found", 404);
-  }
+  if (!building) throw new ApiError("Building not found", 404);
 
   if (!user.savedBuildings.includes(buildingId)) {
     user.savedBuildings.push(buildingId);
     await user.save();
   }
 
-  res
+  return res
     .status(200)
     .json(new ApiResponse(200, null, "Building saved successfully"));
 });
@@ -215,16 +194,16 @@ export const saveBuilding = asyncHandler(async (req, res, next) => {
 /**
  * Unsave Building (Tenant)
  */
-export const unsaveBuilding = asyncHandler(async (req, res, next) => {
+export const unsaveBuilding = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
-  const buildingId = req.params.id;
 
   user.savedBuildings = user.savedBuildings.filter(
-    (id) => id.toString() !== buildingId
+    (id) => id.toString() !== req.params.id
   );
+
   await user.save();
 
-  res
+  return res
     .status(200)
     .json(new ApiResponse(200, null, "Building removed from saved"));
 });
@@ -232,16 +211,13 @@ export const unsaveBuilding = asyncHandler(async (req, res, next) => {
 /**
  * Get Saved Buildings
  */
-export const getSavedBuildings = asyncHandler(async (req, res, next) => {
+export const getSavedBuildings = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id).populate({
     path: "savedBuildings",
-    populate: {
-      path: "owner",
-      select: "fullName email phone",
-    },
+    populate: { path: "owner", select: "fullName email phone" },
   });
 
-  res
+  return res
     .status(200)
     .json(
       new ApiResponse(
@@ -255,19 +231,17 @@ export const getSavedBuildings = asyncHandler(async (req, res, next) => {
 /**
  * Search Nearby Buildings (Geospatial)
  */
-export const searchNearby = asyncHandler(async (req, res, next) => {
+export const searchNearby = asyncHandler(async (req, res) => {
   const { latitude, longitude, distance = 5 } = req.query;
 
   if (!latitude || !longitude) {
     throw new ApiError("Latitude and longitude are required", 400);
   }
 
-  // Distance in kilometers (convert to miles for MongoDB: 1 km ≈ 0.621371 miles)
-  const maxDistance = Number(distance) * 1609.34; // Convert km to meters
+  const maxDistance = Number(distance) * 1000; // km → meters
 
   const buildings = await Building.find({
-    status: "active",
-    "address.location": {
+    location: {
       $near: {
         $geometry: {
           type: "Point",
@@ -280,7 +254,7 @@ export const searchNearby = asyncHandler(async (req, res, next) => {
     .populate("owner", "fullName email phone")
     .limit(20);
 
-  res
+  return res
     .status(200)
     .json(
       new ApiResponse(200, buildings, "Nearby buildings retrieved successfully")
@@ -290,30 +264,27 @@ export const searchNearby = asyncHandler(async (req, res, next) => {
 /**
  * Get Buildings by City
  */
-export const getBuildingsByCity = asyncHandler(async (req, res, next) => {
+export const getBuildingsByCity = asyncHandler(async (req, res) => {
   const { city, page = 1, limit = 10 } = req.query;
 
-  if (!city) {
-    throw new ApiError("City is required", 400);
-  }
+  if (!city) throw new ApiError("City is required", 400);
 
   const skip = (page - 1) * limit;
 
-  const buildings = await Building.find({
+  const filter = {
     "address.city": city,
-    status: "active",
-  })
+    isActive: true,
+  };
+
+  const buildings = await Building.find(filter)
     .populate("owner", "fullName email phone")
-    .limit(Number(limit))
     .skip(skip)
+    .limit(Number(limit))
     .sort({ createdAt: -1 });
 
-  const total = await Building.countDocuments({
-    "address.city": city,
-    status: "active",
-  });
+  const total = await Building.countDocuments(filter);
 
-  res.status(200).json(
+  return res.status(200).json(
     new ApiResponse(
       200,
       {

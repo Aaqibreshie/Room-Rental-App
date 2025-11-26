@@ -14,6 +14,7 @@ const buildingSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: [true, "Please provide owner ID"],
+      index: true,
     },
 
     buildingType: {
@@ -22,7 +23,7 @@ const buildingSchema = new mongoose.Schema(
       required: [true, "Please specify building type"],
     },
 
-    // Address & Location
+    // Address
     address: {
       street: {
         type: String,
@@ -31,6 +32,7 @@ const buildingSchema = new mongoose.Schema(
       city: {
         type: String,
         required: [true, "Please provide city"],
+        index: true,
       },
       state: {
         type: String,
@@ -39,6 +41,7 @@ const buildingSchema = new mongoose.Schema(
       pincode: {
         type: String,
         required: [true, "Please provide pincode"],
+        match: [/^\d{6}$/, "Pincode must be a 6-digit number"],
       },
       country: {
         type: String,
@@ -46,17 +49,31 @@ const buildingSchema = new mongoose.Schema(
       },
     },
 
-    location: {
-      type: {
-        type: String,
-        enum: ["Point"],
-        default: "Point",
-      },
-      coordinates: {
-        type: [Number], // [longitude, latitude]
-        required: [true, "Please provide coordinates"],
-      },
-    },
+    // Geo Location
+    // location: {
+    //   type: {
+    //     type: String,
+    //     enum: ["Point"],
+    //     default: "Point",
+    //   },
+    //   coordinates: {
+    //     type: [Number], // [longitude, latitude]
+    //     required: [true, "Please provide coordinates"],
+    //     validate: {
+    //       validator: function (value) {
+    //         return (
+    //           Array.isArray(value) &&
+    //           value.length === 2 &&
+    //           value[0] >= -180 &&
+    //           value[0] <= 180 &&
+    //           value[1] >= -90 &&
+    //           value[1] <= 90
+    //         );
+    //       },
+    //       message: "Coordinates must be valid [longitude, latitude]",
+    //     },
+    //   },
+    // },
 
     // Building Details
     totalFloors: {
@@ -106,7 +123,7 @@ const buildingSchema = new mongoose.Schema(
     // Images
     images: [
       {
-        url: String,
+        url: { type: String },
         publicId: String,
         uploadedAt: {
           type: Date,
@@ -116,7 +133,10 @@ const buildingSchema = new mongoose.Schema(
     ],
 
     // Contact
-    contactNumbers: [String],
+    contactNumbers: {
+      type: [String],
+      default: [],
+    },
 
     // Rules
     rules: {
@@ -141,6 +161,7 @@ const buildingSchema = new mongoose.Schema(
     isActive: {
       type: Boolean,
       default: true,
+      index: true,
     },
 
     // Ratings
@@ -155,26 +176,17 @@ const buildingSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-
-    // Timestamps
-    createdAt: {
-      type: Date,
-      default: Date.now,
-    },
-
-    updatedAt: {
-      type: Date,
-      default: Date.now,
-    },
   },
   { timestamps: true }
 );
 
-// Geospatial Index
-buildingSchema.index({ "location.coordinates": "2dsphere" });
-buildingSchema.index({ "address.city": 1 });
-buildingSchema.index({ owner: 1 });
-buildingSchema.index({ createdAt: -1 });
+// Correct Geo Index
+buildingSchema.index({ location: "2dsphere" });
+
+// Additional Useful Indexes
+// buildingSchema.index({ "address.city": 1 });
+// buildingSchema.index({ owner: 1 });
+// buildingSchema.index({ createdAt: -1 });
 
 const Building = mongoose.model("Building", buildingSchema);
 

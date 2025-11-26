@@ -264,7 +264,7 @@ export const searchRooms = asyncHandler(async (req, res, next) => {
     roomType,
     minPrice,
     maxPrice,
-    page = 1,
+    page = 1, //change this
     limit = 10,
   } = req.query;
 
