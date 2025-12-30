@@ -1,0 +1,305 @@
+/* =========================================================
+   BUILDING ROOMS — LANDLORD VIEW
+   Premium • Classy • Dashboard Feel
+========================================================= */
+
+:root {
+  --bg-main: #f6f7f9;
+  --card-bg: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-soft: rgba(15, 23, 42, 0.08);
+  --accent: #2563eb;
+  --accent-hover: #1e40af;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+
+.br-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  background: var(--bg-main);
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.br-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.br-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.br-subtitle {
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   ADD ROOM BUTTON
+========================================================= */
+
+.br-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+}
+
+.br-add-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.35);
+}
+
+.br-add-btn.large {
+  padding: 14px 28px;
+  font-size: 15px;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.br-empty {
+  margin-top: 80px;
+  text-align: center;
+  background: var(--card-bg);
+  padding: 60px 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.br-empty img {
+  width: 120px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.br-empty h2 {
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.br-empty p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+/* =========================================================
+   ROOMS GRID
+========================================================= */
+
+.br-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+/* =========================================================
+   ROOM CARD
+========================================================= */
+
+.br-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4px;
+}
+
+.br-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.br-imgBox {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.br-imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.br-card:hover .br-imgBox img {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.br-info {
+  padding: 6px 20px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #6b7280;
+}
+
+.br-info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.br-info p:last-child {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.br-info svg {
+  color: var(--accent);
+}
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.br-view-btn {
+  margin: 16px;
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.br-view-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+}
+
+.br-view-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.br-view-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.br-loading {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+/* =========================================================
+   ROOM AVAILABILITY INDICATOR (READ-ONLY)
+========================================================= */
+
+.br-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 6px;
+}
+
+.br-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.br-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Available */
+.br-status.available {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+/* Unavailable */
+.br-status.unavailable {
+  background: #f9fafb;
+  color: #64748b;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .br-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .br-add-btn {
+    margin-top: 16px;
+  }
+
+  .br-info {
+    grid-template-columns: 1fr;
+  }
+}

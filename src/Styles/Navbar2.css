@@ -1,0 +1,101 @@
+/* NAVBAR FULL WIDTH WITHOUT SCROLLBAR */
+.nav2 {
+  width: 100%; /* 🔥 Prevent horizontal overflow */
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+/* CENTERED INNER CONTAINER */
+.nav2-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 14px 12px; /* 🔥 Logo closer to left */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden; /* Extra safety against scroll */
+}
+
+/* LOGO */
+.nav2-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-left: 0; /* Ensures perfect left alignment */
+}
+
+/* NAV LINKS */
+.nav2-links {
+  display: flex;
+  gap: 26px;
+}
+
+/* LINK STYLE */
+.nav2-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  padding: 6px 2px;
+  transition: 0.2s ease;
+  position: relative;
+  white-space: nowrap; /* Prevents link wrapping */
+}
+
+/* ICON */
+.nav2-icon {
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+/* ACTIVE STATE */
+.nav2-link.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.nav2-link.active .nav2-icon {
+  opacity: 1;
+}
+
+.nav2-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  border-radius: 3px;
+}
+
+/* HOVER */
+.nav2-link:hover {
+  color: #000;
+}
+
+.nav2-link:hover .nav2-icon {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+  .nav2-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav2-links {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+}

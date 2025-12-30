@@ -1,0 +1,101 @@
+.authPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #fafafa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+}
+
+.authBox {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.authBox h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.authSubtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.authForm input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1.5px solid #ddd;
+  font-size: 15px;
+}
+
+.authForm input:focus {
+  outline: none;
+  border-color: #111;
+}
+
+.authBtn {
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.switchText {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.loginErrorBox {
+  background: #ffe5e5;
+  color: #c00;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loginErrorIcon {
+  font-size: 18px;
+}
+.authInlineRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.linkLikeBtn {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--brand-500);
+  cursor: pointer;
+}
+
+.linkLikeBtn:hover {
+  text-decoration: underline;
+}

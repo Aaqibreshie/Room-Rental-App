@@ -1,0 +1,335 @@
+/* ---------------------------
+   HELP CENTER — PREMIUM UI
+   Matches Safety v2 / Roomify theme
+   --------------------------- */
+
+.helpPageWrap {
+  font-family: var(--font-sans);
+  color: var(--text-1);
+  background: var(--bg-0);
+}
+
+/* HERO */
+.helpHero {
+  padding: 72px 22px 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 247, 248, 0.6),
+    transparent 60%
+  );
+}
+
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.heroLeft {
+  flex: 1;
+  min-width: 380px;
+}
+.heroRight {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero text */
+.helpHero h1 {
+  font-size: 44px;
+  margin: 0 0 12px;
+  line-height: 1.02;
+  letter-spacing: -0.6px;
+  color: var(--text-1);
+}
+
+.heroSub {
+  font-size: 17px;
+  color: var(--text-2);
+  margin-bottom: 22px;
+}
+
+/* Search block (keeps your existing look but modern) */
+.searchBlock {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.helpSearch {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  box-shadow: var(--shadow-1);
+  outline: none;
+}
+
+.helpSearch:focus {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  border-color: rgba(255, 56, 92, 0.18);
+}
+
+/* Support card at hero right */
+.supportCard {
+  width: 100%;
+  background: linear-gradient(180deg, #fff, #fbfbfb);
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.supportIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 56, 92, 0.12),
+    rgba(255, 56, 92, 0.06)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--brand-500);
+  flex-shrink: 0;
+}
+
+.supportContent h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.supportContent p {
+  margin: 0 0 12px;
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* FEATURES GRID */
+.helpFeatures {
+  padding: 30px 22px;
+}
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.featureCard {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
+}
+
+.featureIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: rgba(255, 56, 92, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--brand-500);
+  flex-shrink: 0;
+}
+
+.featureText h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.featureText p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+/* FAQ SECTION */
+.helpFAQ {
+  padding: 36px 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sectionTitle {
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: var(--text-1);
+}
+
+/* layout between faq list and sidebar */
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* FAQ list */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.faqQ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faqQ span {
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.chev {
+  transition: transform 180ms ease;
+  color: var(--text-2);
+}
+.chev.rot {
+  transform: rotate(180deg);
+}
+
+/* answer container */
+.faqA {
+  overflow: hidden;
+  padding-top: 10px;
+}
+.faqA p {
+  margin: 0;
+  color: var(--text-2);
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+/* SIDEBAR */
+.helpSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebarCard {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.linkList a {
+  color: var(--brand-500);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* small sidebar CTA */
+.smallCard p {
+  margin-bottom: 12px;
+  color: var(--text-2);
+}
+
+/* CTA FOOTER */
+.helpCTA {
+  padding: 40px 22px;
+}
+.ctaInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 56, 92, 0.06),
+    rgba(255, 56, 92, 0.03)
+  );
+  padding: 20px 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 56, 92, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.ctaInner h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.ctaInner p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .heroInner {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .heroRight {
+    width: 100%;
+  }
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaInner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

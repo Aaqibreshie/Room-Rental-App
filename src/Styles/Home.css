@@ -1,0 +1,100 @@
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0f172a;
+}
+
+/* ROOM GRID FIXES */
+.roomGrid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); */
+  /* gap: 22px; */
+  padding-top: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.roomGridItem {
+  display: flex;
+}
+
+.roomGridItem > .roomCard {
+  flex: 1;
+}
+
+/* EMPTY STATE */
+.noRoomsBox {
+  text-align: center;
+  padding: 40px;
+  margin: 80px auto;
+  max-width: 420px;
+  text-align: center;
+  color: #475569;
+}
+
+.noRoomsImg {
+  width: 160px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.noRoomsBox h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.noRoomsBox p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ===== CLEAN RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 1024px) {
+  .roomGrid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .roomGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+
+  .noRoomsBox {
+    padding: 48px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .roomGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    margin-bottom: 20px;
+  }
+
+  .roomGrid {
+    gap: 18px;
+  }
+
+  .noRoomsBox {
+    padding: 40px 16px;
+  }
+
+  .noRoomsImg {
+    width: 120px;
+    height: 120px;
+  }
+}

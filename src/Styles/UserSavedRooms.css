@@ -1,0 +1,93 @@
+/* =====================================
+   SAVED ROOMS — PREMIUM POLISH
+   Calm • Personal • Consistent
+===================================== */
+
+.saved-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 96px;
+}
+
+/* ---------- SUBTITLE ---------- */
+.saved-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+/* ---------- LOADING ---------- */
+.saved-loading {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ---------- EMPTY STATE ---------- */
+.saved-empty {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  color: #64748b;
+}
+
+.saved-empty h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.saved-empty p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ---------- GRID (MATCHES HOME) ---------- */
+.saved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Make RoomCards equal height */
+.saved-grid > * {
+  display: flex;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .saved-container {
+    padding: 28px 20px 72px;
+  }
+
+  .saved-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .saved-container {
+    padding: 96px 20px 48px;
+  }
+
+  .saved-subtitle {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .saved-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

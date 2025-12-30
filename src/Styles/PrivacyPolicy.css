@@ -1,0 +1,100 @@
+/* ======================================================
+   ROOMIFY PRIVACY POLICY — BRAND ACCENT COLOR THEME (v2)
+====================================================== */
+
+.privacyContainer {
+  padding: 100px 24px;
+  background: #fafafa;
+  font-family: var(--font-sans);
+}
+
+/* ---------------- HERO ---------------- */
+.privacyHero {
+  max-width: 850px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.privacyHero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: var(--brand-500);
+  margin-bottom: 16px;
+}
+
+.privacyHero p {
+  font-size: 18px;
+  line-height: 1.68;
+  color: #475569;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ---------------- CONTENT ---------------- */
+.privacyContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------------- SECTIONS ---------------- */
+.privacySection {
+  background: rgba(255, 56, 92, 0.05); /* light pink tint */
+  padding: 40px 36px;
+  margin-bottom: 32px;
+
+  border-radius: 22px;
+  border-left: 6px solid var(--brand-500); /* COLOR ACCENT LEFT BORDER */
+
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+  transition: 0.25s ease;
+}
+
+/* Hover glow (premium) */
+.privacySection:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 55px rgba(255, 56, 92, 0.18);
+}
+
+/* Section title with brand color */
+.sectionTitleColor {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--brand-500);
+  margin-bottom: 16px;
+}
+
+/* Paragraphs */
+.privacySection p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+/* List items */
+.privacySection ul {
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #475569;
+}
+
+.privacySection li {
+  margin-bottom: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .privacyHero h1 {
+    font-size: 40px;
+  }
+
+  .privacySection {
+    padding: 30px 22px;
+  }
+}

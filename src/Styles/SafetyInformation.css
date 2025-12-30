@@ -1,0 +1,112 @@
+/* ----------------------------------------
+   ROOMIFY SAFETY PAGE — PREMIUM DESIGN 
+----------------------------------------- */
+
+.safetyPageContainer {
+  padding: 100px 22px;
+  background: #fafafa;
+  font-family: var(--font-sans);
+}
+
+/* ---------- Header Section ---------- */
+.safetyTop {
+  max-width: 800px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.safetyTop h1 {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+.safetyTop p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.65;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ---------- Feature Grid ---------- */
+.safetyGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ---------- Feature Card ---------- */
+.safetyFeatureCard {
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  border-radius: 18px;
+  padding: 34px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.safetyFeatureCard:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.safetyIcon {
+  font-size: 36px;
+  color: var(--brand-500);
+  margin-bottom: 14px;
+}
+
+.safetyFeatureCard h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.safetyFeatureCard p {
+  color: #555;
+  line-height: 1.55;
+}
+
+/* ---------- Guidelines Box ---------- */
+.guidelinesBox {
+  max-width: 900px;
+  margin: 90px auto 0;
+  padding: 45px 35px;
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.guidelinesBox h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.guidelineSub {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 26px;
+}
+
+.guidelinesBox ul {
+  list-style: disc;
+  padding-left: 40px;
+  text-align: left;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #333;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.guidelinesBox li {
+  margin-bottom: 12px;
+}

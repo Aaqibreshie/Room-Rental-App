@@ -1,0 +1,138 @@
+/* === GLOBAL AUTH PAGE LAYOUT === */
+.authContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f9;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* === CARD === */
+.authCard {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === HEADINGS === */
+.authCard h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+}
+
+.authSubtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* === ERROR MESSAGE === */
+.authError {
+  background: #ffe5e5;
+  color: #c00;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* === FORM === */
+.authFormModern {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* === INPUT FIELDS === */
+.inputGroup input,
+.inputGroup select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background: #fafafa;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: #111;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.12);
+}
+
+/* === SUBMIT BUTTON === */
+.authPrimaryBtn {
+  margin-top: 10px;
+  padding: 13px 0;
+  border: none;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.authPrimaryBtn:hover {
+  background: #222;
+}
+
+.authPrimaryBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* === SWITCH TEXT === */
+.authSwitch {
+  margin-top: 20px;
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+}
+
+.authSwitch a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.authSwitch a:hover {
+  text-decoration: underline;
+}

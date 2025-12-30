@@ -1,0 +1,36 @@
+.skeleton {
+  pointer-events: none;
+}
+
+.skeleton-image {
+  height: 200px;
+  background: #e5e7eb;
+}
+
+.skeleton-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-line {
+  height: 12px;
+  border-radius: 6px;
+  background: #e5e7eb;
+}
+
+.skeleton-line.title {
+  width: 80%;
+  height: 16px;
+}
+
+.skeleton-line.small {
+  width: 60%;
+}
+
+.skeleton-line.price {
+  width: 40%;
+  height: 14px;
+  margin-top: 12px;
+}

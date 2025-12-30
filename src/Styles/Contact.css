@@ -1,0 +1,136 @@
+.contactWrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+/* Fade Animation */
+.fadeIn {
+  opacity: 0;
+  animation: fadeAnim 0.8s ease forwards;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HERO SECTION */
+.contactHero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffdee2, #fff1f5, #fffbfc);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 80px;
+}
+.contactHero h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+.contactHero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* CONTACT INFO GRID */
+.contactInfoSection h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.contactInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.contactInfoCard {
+  background: white;
+  padding: 26px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  transition: 0.25s;
+}
+.contactInfoCard:hover {
+  transform: translateY(-6px);
+}
+.contactInfoIcon {
+  font-size: 32px;
+  color: #ff385c;
+  margin-bottom: 12px;
+}
+
+/* FORM + MAP SECTION */
+.contactFormSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* FORM CARD */
+.contactFormCard {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+.contactFormCard h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contactFormCard input,
+.contactFormCard textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+.contactFormCard input:focus,
+.contactFormCard textarea:focus {
+  border-color: #ff385c;
+  outline: none;
+}
+.contactFormCard textarea {
+  resize: none;
+  height: 140px;
+}
+
+.contactSubmit {
+  width: 100%;
+  padding: 14px;
+  background: #ff385c;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.contactSubmit:hover {
+  background: #e62e53;
+}
+
+/* MAP CARD */
+.contactMapCard {
+  background: white;
+  height: 370px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}

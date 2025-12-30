@@ -1,0 +1,133 @@
+/* ─────────────────────────────────────────────
+   ULTIMATE FILTER BAR v3 — LUXURY INTERNATIONAL
+────────────────────────────────────────────── */
+
+.newFilterBar {
+  width: 100%;
+  padding: 18px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+/* ───────────────────────────
+   FADE EDGES (AIRBNB STYLE)
+──────────────────────────── */
+
+.scrollFade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.leftFade {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), transparent);
+}
+
+.rightFade {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent);
+}
+
+/* ─────────────────────────── */
+
+.filterTrack {
+  position: relative;
+  display: flex;
+  gap: 26px;
+  padding: 0 34px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.filterTrack::-webkit-scrollbar {
+  display: none;
+}
+
+/* UNDERLINE SLIDER */
+.chipUnderline {
+  position: absolute;
+  bottom: -4px;
+  height: 3px;
+  background: #4f46e5;
+  border-radius: 8px;
+  transition: all 0.28s ease;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────
+   FILTER CHIP — LUXURY PILL
+────────────────────────────────────────────── */
+
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+
+  background: #ffffff;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* SIMPLE HOVER */
+.filterChip:hover {
+  background: #f8fafc;
+  border-color: #c7d2fe;
+  color: #0f172a;
+}
+
+.filterChip:hover .chipIcon {
+  opacity: 1;
+  color: #4f46e5;
+}
+
+/* ─────────────────────────────────────────────
+   ACTIVE CHIP — clean highlight + icon bounce
+────────────────────────────────────────────── */
+
+.activeChip {
+  background: #eef2ff;
+  border-color: #4f46e5;
+  color: #4f46e5;
+}
+
+.chipIcon {
+  font-size: 16px;
+  opacity: 0.7;
+}
+.activeChip .chipIcon {
+  opacity: 1;
+}
+
+/* ─────────── RESPONSIVE ─────────── */
+
+@media (max-width: 768px) {
+  .filterChip {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterTrack {
+    gap: 16px;
+    padding: 0 20px;
+  }
+}

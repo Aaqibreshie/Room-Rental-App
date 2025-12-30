@@ -1,0 +1,125 @@
+/* ===========================
+   ROOM CARD — CALM PREMIUM
+=========================== */
+
+.roomCard {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+}
+
+.roomCard:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE */
+.roomImageWrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.roomImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.roomCard:hover .roomImage {
+  transform: scale(1.04);
+}
+
+/* HEART */
+.heartBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.heartBtn svg {
+  font-size: 16px;
+  color: #ec4899;
+}
+
+/* CONTENT */
+.roomContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-height: 140px; /* 👈 THIS IS THE KEY */
+}
+
+/* TITLE */
+.roomTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.4;
+}
+.roomTitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* BUILDING */
+.roomBuilding {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  margin: 0;
+}
+.roomBuilding {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* LOCATION */
+.roomLocation {
+  font-size: 14px;
+  color: #475569;
+  margin: 0;
+}
+.roomLocation {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* PRICE */
+.roomMeta {
+  margin-top: auto;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  align-items: stretch;
+}

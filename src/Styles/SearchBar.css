@@ -1,0 +1,151 @@
+/* ---------- Overlay ---------- */
+.searchOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* ---------- Container ---------- */
+.searchContainer {
+  width: 90%;
+  max-width: 550px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  animation: slideDown 0.25s ease;
+}
+
+.searchHeader h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.searchFields {
+  display: grid;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.inputGroup input,
+.inputGroup select {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid #e6e6e6;
+  font-size: 15px;
+}
+
+.searchBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ---------- Animations ---------- */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------------- RESPONSIVENESS ---------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .searchContainer {
+    max-width: 460px;
+    padding: 20px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 768px) {
+  .searchOverlay {
+    padding-top: 90px;
+  }
+
+  .searchContainer {
+    width: 92%;
+    max-width: 400px;
+    padding: 18px;
+  }
+
+  .searchHeader h3 {
+    font-size: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .searchContainer {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .inputGroup input,
+  .inputGroup select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .searchBtn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .searchContainer {
+    padding: 12px;
+  }
+
+  .searchHeader h3 {
+    font-size: 18px;
+  }
+}

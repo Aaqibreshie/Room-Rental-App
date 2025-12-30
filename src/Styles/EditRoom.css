@@ -1,0 +1,327 @@
+/* ==================================================
+   DESIGN TOKENS — PREMIUM AIRBNB STYLE
+================================================== */
+:root {
+  --bg-main: #f7f7f8;
+  --card-bg: #ffffff;
+
+  --border-soft: rgba(0, 0, 0, 0.06);
+
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 30px 70px rgba(0, 0, 0, 0.12);
+
+  --accent: #ff385c;
+  --accent-soft: rgba(255, 56, 92, 0.15);
+
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+}
+
+/* ==================================================
+   GLOBAL WRAPPER
+================================================== */
+.er-wrapper {
+  max-width: 1180px;
+  margin: 60px auto 100px;
+  padding: 0 24px;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-main);
+}
+
+/* ==================================================
+   MAIN CARD
+================================================== */
+.er-card {
+  background: var(--card-bg);
+  padding: 48px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-soft);
+}
+
+.er-card h2 {
+  font-size: 36px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.er-sub {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 34px;
+}
+
+/* ==================================================
+   SERVER ERROR
+================================================== */
+.er-server-error {
+  background: rgba(255, 56, 92, 0.08);
+  color: #b91c1c;
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* ==================================================
+   FORM LAYOUT
+================================================== */
+.er-form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.er-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.er-row span,
+.er-grid-3 label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ==================================================
+   INPUTS — PREMIUM
+================================================== */
+.er-form input,
+.er-form textarea,
+.er-form select {
+  width: 100%;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.er-form input:hover,
+.er-form textarea:hover,
+.er-form select:hover {
+  background: #ffffff;
+}
+
+.er-form input:focus,
+.er-form textarea:focus,
+.er-form select:focus {
+  background: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  outline: none;
+}
+
+.er-form textarea {
+  resize: vertical;
+}
+
+/* ==================================================
+   GRID ROWS
+================================================== */
+.er-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ==================================================
+   SECTION HEADERS
+================================================== */
+.er-section {
+  margin-top: 36px;
+}
+
+.er-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.er-hint {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+/* ==================================================
+   SUBSECTIONS
+================================================== */
+.er-subsection {
+  margin-bottom: 28px;
+}
+
+.er-subsection h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.er-muted {
+  color: #9ca3af;
+}
+
+/* ==================================================
+   IMAGE GRID
+================================================== */
+.er-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.er-image-item {
+  position: relative;
+  height: 170px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f3f4f6;
+  cursor: grab;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.er-image-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.er-image-item:active {
+  cursor: grabbing;
+  transform: scale(0.97);
+}
+
+.er-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Delete Button */
+.er-img-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(17, 24, 39, 0.65);
+  backdrop-filter: blur(8px);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.er-img-delete:hover {
+  background: rgba(255, 56, 92, 0.95);
+}
+
+/* Image Order Badge */
+.er-img-order {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==================================================
+   DROPZONE
+================================================== */
+.er-dropzone {
+  border: 2px dashed #d1d5db;
+  background: linear-gradient(180deg, #fafafa, #ffffff);
+  border-radius: 22px;
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.er-dropzone:hover {
+  border-color: var(--accent);
+  background: #fff5f7;
+}
+
+.er-drop-inner {
+  color: var(--text-secondary);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ==================================================
+   ACTION BUTTONS
+================================================== */
+.er-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.er-btn {
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.er-btn.primary {
+  background: linear-gradient(135deg, #ff385c, #e11d48);
+  color: white;
+}
+
+.er-btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(255, 56, 92, 0.35);
+}
+
+.er-btn.ghost {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.er-btn.ghost:hover {
+  background: #e5e7eb;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+  .er-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .er-card {
+    padding: 32px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .er-wrapper {
+    margin: 40px auto 80px;
+    padding: 0 16px;
+  }
+
+  .er-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+}
+/* ==================================================
+   END OF FILE

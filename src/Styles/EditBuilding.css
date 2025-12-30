@@ -1,0 +1,121 @@
+.eb-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.eb-header h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.eb-header p {
+  color: #6b7280;
+}
+
+.eb-form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.eb-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.eb-input svg {
+  font-size: 20px;
+  color: #2563eb;
+}
+
+.eb-input input,
+.eb-input select {
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  background: transparent;
+}
+
+.eb-sec-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* IMAGE GRID */
+.eb-image-preview {
+  margin-top: 10px;
+}
+
+.eb-img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.eb-img-grid img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.eb-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eb-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.eb-btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.eb-btn.cancel {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.eb-error {
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 8px;
+  color: #b91c1c;
+  margin-bottom: 10px;
+}
+.eb-image-upload input {
+  background: transparent;
+  border: none;
+}
+
+.eb-image-upload {
+  cursor: pointer;
+}
+
+.eb-hint {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: -10px;
+}
