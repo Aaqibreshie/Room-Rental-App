@@ -1,0 +1,14 @@
+2025-12-20 13:41:58 [ERROR]: Error sending email: Unknown email template 
+Error: Unknown email template
+    at sendEmail (file:///C:/Users/Asus/Desktop/room-rental-backend/src/services/email.service.js:337:15)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/controllers/authController.js:340:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2025-12-20 14:02:28 [ERROR]: Error sending email: connect ECONNREFUSED 172.217.194.109:465 
+Error: connect ECONNREFUSED 172.217.194.109:465
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2025-12-20 14:10:09 [ERROR]: Error sending email: connect ECONNREFUSED 142.250.4.108:465 
+Error: connect ECONNREFUSED 142.250.4.108:465
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2025-12-20 18:46:39 [ERROR]: unhandledRejection: Image file format avif not allowed
+  No stack trace 
+2025-12-20 18:46:39 [ERROR]: Unhandled Rejection at: 

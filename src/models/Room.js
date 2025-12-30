@@ -39,7 +39,7 @@ const roomSchema = new mongoose.Schema(
 
     roomType: {
       type: String,
-      enum: ["single", "shared", "suite", "studio"],
+      enum: ["single", "shared", "pg", "hostel"],
       required: [true, "Please specify a room type"],
       index: true,
     },
@@ -229,11 +229,6 @@ const roomSchema = new mongoose.Schema(
 
 // FULL-TEXT SEARCH INDEX
 roomSchema.index({ title: "text", description: "text" });
-
-// OTHER INDEXES
-// roomSchema.index({ building: 1 });
-// roomSchema.index({ landlord: 1 });
-// roomSchema.index({ createdAt: -1 });
 
 const Room = mongoose.model("Room", roomSchema);
 

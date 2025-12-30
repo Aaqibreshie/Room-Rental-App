@@ -1,0 +1,12 @@
+2025-11-26 11:25:15 [ERROR]: ❌ Error connecting to MongoDB: 
+2025-11-26 11:25:15 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-11-26 11:25:19 [INFO]: SIGINT signal received: closing HTTP server 

@@ -19,7 +19,7 @@ const buildingSchema = new mongoose.Schema(
 
     buildingType: {
       type: String,
-      enum: ["residential", "mixed_use", "hostel", "hotel"],
+      enum: ["residential", "mixed_use", "hostel", "hotel", "pg"],
       required: [true, "Please specify building type"],
     },
 
@@ -48,32 +48,25 @@ const buildingSchema = new mongoose.Schema(
         default: "India",
       },
     },
+    rooms: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Room",
+      },
+    ],
 
     // Geo Location
-    // location: {
-    //   type: {
-    //     type: String,
-    //     enum: ["Point"],
-    //     default: "Point",
-    //   },
-    //   coordinates: {
-    //     type: [Number], // [longitude, latitude]
-    //     required: [true, "Please provide coordinates"],
-    //     validate: {
-    //       validator: function (value) {
-    //         return (
-    //           Array.isArray(value) &&
-    //           value.length === 2 &&
-    //           value[0] >= -180 &&
-    //           value[0] <= 180 &&
-    //           value[1] >= -90 &&
-    //           value[1] <= 90
-    //         );
-    //       },
-    //       message: "Coordinates must be valid [longitude, latitude]",
-    //     },
-    //   },
-    // },
+    location: {
+      type: {
+        type: String,
+        enum: ["Point"],
+        default: "Point",
+      },
+      coordinates: {
+        type: [Number], // [longitude, latitude]
+        required: true,
+      },
+    },
 
     // Building Details
     totalFloors: {
@@ -102,21 +95,6 @@ const buildingSchema = new mongoose.Schema(
     amenities: [
       {
         type: String,
-        enum: [
-          "wifi",
-          "parking",
-          "gym",
-          "pool",
-          "security",
-          "cctv",
-          "lift",
-          "garden",
-          "laundry",
-          "grocery_store",
-          "hospital_nearby",
-          "school_nearby",
-          "public_transport",
-        ],
       },
     ],
 
@@ -182,11 +160,6 @@ const buildingSchema = new mongoose.Schema(
 
 // Correct Geo Index
 buildingSchema.index({ location: "2dsphere" });
-
-// Additional Useful Indexes
-// buildingSchema.index({ "address.city": 1 });
-// buildingSchema.index({ owner: 1 });
-// buildingSchema.index({ createdAt: -1 });
 
 const Building = mongoose.model("Building", buildingSchema);
 

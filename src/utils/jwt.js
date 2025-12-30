@@ -1,17 +1,17 @@
-import jwt from 'jsonwebtoken';
-import config from '../config/config.js';
+import jwt from "jsonwebtoken";
+import config from "../config/config.js";
 
 // Generate Access Token
 export const generateAccessToken = (userId) => {
   return jwt.sign({ id: userId }, config.JWT_SECRET, {
-    expiresIn: config.JWT_EXPIRE
+    expiresIn: config.JWT_EXPIRE,
   });
 };
 
 // Generate Refresh Token
 export const generateRefreshToken = (userId) => {
   return jwt.sign({ id: userId }, config.JWT_REFRESH_SECRET, {
-    expiresIn: config.JWT_REFRESH_EXPIRE
+    expiresIn: config.JWT_REFRESH_EXPIRE,
   });
 };
 
@@ -28,7 +28,7 @@ export const verifyAccessToken = (token) => {
   try {
     return jwt.verify(token, config.JWT_SECRET);
   } catch (error) {
-    throw new Error('Invalid or expired access token');
+    throw new Error("Invalid or expired access token");
   }
 };
 
@@ -37,7 +37,7 @@ export const verifyRefreshToken = (token) => {
   try {
     return jwt.verify(token, config.JWT_REFRESH_SECRET);
   } catch (error) {
-    throw new Error('Invalid or expired refresh token');
+    throw new Error("Invalid or expired refresh token");
   }
 };
 
@@ -50,19 +50,22 @@ export const decodeToken = (token) => {
 export const setTokenCookies = (res, accessToken, refreshToken) => {
   const cookieOptions = {
     httpOnly: true,
-    secure: config.isProduction(),
-    sameSite: 'strict',
-    maxAge: config.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000
+    secure: false, // Set to true if using HTTPS
+    sameSite: "none",
+    path: "/",
   };
 
-  res.cookie('accessToken', accessToken, { ...cookieOptions, maxAge: 7 * 24 * 60 * 60 * 1000 });
-  res.cookie('refreshToken', refreshToken, cookieOptions);
+  res.cookie("accessToken", accessToken, {
+    ...cookieOptions,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+  });
+  res.cookie("refreshToken", refreshToken, cookieOptions);
 };
 
 // Clear Token Cookies
 export const clearTokenCookies = (res) => {
-  res.clearCookie('accessToken');
-  res.clearCookie('refreshToken');
+  res.clearCookie("accessToken");
+  res.clearCookie("refreshToken");
 };
 
 export default {
@@ -73,5 +76,5 @@ export default {
   verifyRefreshToken,
   decodeToken,
   setTokenCookies,
-  clearTokenCookies
+  clearTokenCookies,
 };

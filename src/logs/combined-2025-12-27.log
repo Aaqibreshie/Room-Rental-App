@@ -1,0 +1,22 @@
+2025-12-27 10:25:42 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 10:40:34 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 11:25:59 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 12:39:59 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 13:04:36 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-12-27 13:04:36 [INFO]: Database: test 
+2025-12-27 13:04:36 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-27 14:58:00 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 15:23:25 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 17:06:01 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 18:13:43 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 21:24:59 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-27 21:43:11 [WARN]: ⚠️ MongoDB disconnected 

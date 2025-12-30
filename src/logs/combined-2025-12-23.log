@@ -1,0 +1,138 @@
+2025-12-23 12:00:25 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-23 12:17:16 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-12-23 12:17:16 [INFO]: Database: test 
+2025-12-23 12:17:16 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 12:24:37 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-12-23 12:24:37 [INFO]: Database: test 
+2025-12-23 12:24:37 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 12:29:33 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-12-23 12:29:33 [INFO]: Database: test 
+2025-12-23 12:29:33 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 13:09:29 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-12-23 13:09:29 [INFO]: Database: test 
+2025-12-23 13:09:29 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 13:28:52 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-12-23 13:28:52 [INFO]: Database: test 
+2025-12-23 13:28:52 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 13:29:46 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-12-23 13:29:46 [INFO]: Database: test 
+2025-12-23 13:29:46 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 13:30:19 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-01.n1gkmrq.mongodb.net 
+2025-12-23 13:30:19 [INFO]: Database: test 
+2025-12-23 13:30:19 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 13:48:32 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-23 14:07:03 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-12-23 14:07:03 [INFO]: Database: test 
+2025-12-23 14:07:03 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 14:31:05 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-23 15:59:36 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-23 16:53:40 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-12-23 16:53:40 [INFO]: Database: test 
+2025-12-23 16:53:40 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 16:55:17 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-12-23 16:55:17 [INFO]: Database: test 
+2025-12-23 16:55:17 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 16:55:21 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-02.n1gkmrq.mongodb.net 
+2025-12-23 16:55:21 [INFO]: Database: test 
+2025-12-23 16:55:21 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-23 18:14:05 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-23 18:30:30 [WARN]: ⚠️ MongoDB disconnected 

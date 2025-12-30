@@ -1,0 +1,18 @@
+2025-12-18 11:41:51 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-18 11:57:08 [ERROR]: unhandledRejection: Image file format avif not allowed
+  No stack trace 
+2025-12-18 11:57:08 [ERROR]: Unhandled Rejection at: 
+2025-12-18 11:58:19 [INFO]: ✅ MongoDB Connected: ac-vpxvy3e-shard-00-00.n1gkmrq.mongodb.net 
+2025-12-18 11:58:19 [INFO]: Database: test 
+2025-12-18 11:58:19 [INFO]: 
+      ╔════════════════════════════════════════════╗
+      ║   🚀 Room Rental Backend Server Started   ║
+      ╠════════════════════════════════════════════╣
+      ║ 📍 Port: 5000
+      ║ 🌍 Environment: development
+      ║ 🔗 API Version: vv1
+      ║ 🔐 CORS Enabled: http://localhost:3000
+      ╚════════════════════════════════════════════╝
+       
+2025-12-18 15:45:52 [WARN]: ⚠️ MongoDB disconnected 
+2025-12-18 20:25:40 [WARN]: ⚠️ MongoDB disconnected 

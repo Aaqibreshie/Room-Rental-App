@@ -1,11 +1,12 @@
 import express from "express";
 import { asyncHandler } from "../utils/asyncHandler.js";
+import { upload } from "../middleware/multer.js";
 import {
   isAuthenticated,
   isLandlordOrAdmin,
   isAdmin,
 } from "../middleware/authMiddleware.js";
-import { validateCreateBuilding } from "../validators/validators.js";
+
 import {
   getAllBuildings,
   getBuildingById,
@@ -21,41 +22,47 @@ import {
 
 const router = express.Router();
 
-// Public Routes
+// PUBLIC ROUTES
 router.get("/", asyncHandler(getAllBuildings));
 router.get("/search/nearby", asyncHandler(searchNearby));
-router.get("/:id", asyncHandler(getBuildingById));
 
-// Tenant Routes
-router.post("/:id/save", isAuthenticated, asyncHandler(saveBuilding));
-router.delete("/:id/unsave", isAuthenticated, asyncHandler(unsaveBuilding));
-router.get("/saved/all", isAuthenticated, asyncHandler(getSavedBuildings));
+// LANDLORD ROUTES MUST COME BEFORE /:id
+router.get(
+  "/my-buildings",
+  isAuthenticated,
+  isLandlordOrAdmin,
+  asyncHandler(getLandlordBuildings)
+);
 
-// Landlord Routes
 router.post(
   "/",
   isAuthenticated,
   isLandlordOrAdmin,
-  validateCreateBuilding,
+  upload.array("images", 10),
   asyncHandler(createBuilding)
 );
+
 router.put(
   "/:id",
   isAuthenticated,
   isLandlordOrAdmin,
+  upload.array("images", 10),
   asyncHandler(updateBuilding)
 );
+
 router.delete(
   "/:id",
   isAuthenticated,
   isLandlordOrAdmin,
   asyncHandler(deleteBuilding)
 );
-router.get(
-  "/landlord/my-buildings",
-  isAuthenticated,
-  isLandlordOrAdmin,
-  asyncHandler(getLandlordBuildings)
-);
+
+// TENANT ROUTES
+router.post("/:id/save", isAuthenticated, asyncHandler(saveBuilding));
+router.delete("/:id/unsave", isAuthenticated, asyncHandler(unsaveBuilding));
+router.get("/saved/all", isAuthenticated, asyncHandler(getSavedBuildings));
+
+// GET BUILDING BY ID MUST ALWAYS BE LAST
+router.get("/:id", asyncHandler(getBuildingById));
 
 export default router;

@@ -34,7 +34,7 @@ export const validateRegister = [
     .withMessage("Email is required"),
 
   body("phone")
-    .matches(/^[6-9]\d{9}$/) //Change this
+    .matches(/^(\+91[\-\s]?)?[6-9]\d{9}$/) //Change this
     .withMessage("Please provide a valid 10-digit Indian phone number"),
 
   body("password")

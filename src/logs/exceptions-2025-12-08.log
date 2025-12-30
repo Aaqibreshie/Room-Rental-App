@@ -1,0 +1,92 @@
+2025-12-08 13:50:45 [ERROR]: uncaughtException: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:53:5 
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:53:5
+2025-12-08 13:52:05 [ERROR]: uncaughtException: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:63:5 
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:63:5
+2025-12-08 13:53:18 [ERROR]: uncaughtException: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:64:5 
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:64:5
+2025-12-08 13:53:29 [ERROR]: uncaughtException: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:64:5 
+TypeError: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+    at name (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:96:19)
+    at parse (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:113:68)
+    at pathToRegexp (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:267:58)
+    at Object.match (C:\Users\Asus\Desktop\room-rental-backend\node_modules\path-to-regexp\dist\index.js:237:30)
+    at matcher (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as options] (C:\Users\Asus\Desktop\room-rental-backend\node_modules\express\lib\application.js:478:22)
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/server.js:64:5

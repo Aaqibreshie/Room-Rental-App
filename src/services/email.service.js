@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 /**
  * Forgot Password Email Template
  */
-const forgotPasswordTemplate = (name, resetUrl, expiryTime) => {
+const forgotPasswordTemplate = (name, resetUrl, expiryTime, otp) => {
   return `
     <!DOCTYPE html>
     <html>
@@ -41,7 +41,9 @@ const forgotPasswordTemplate = (name, resetUrl, expiryTime) => {
         </div>
         <div class="content">
           <p>Hi ${name},</p>
-          <p>We received a request to reset your password. Click the button below to create a new password:</p>
+          <p>We received a request to reset your password. Click the button below or Enter the OTP to create a new password:</p>
+          <p>Your One-Time Password (OTP): <strong>${otp}</strong></p>
+          <p>This OTP will expire in ${expiryTime}.</p>
           <center>
             <a href="${resetUrl}" class="button">Reset Password</a>
           </center>
@@ -299,7 +301,8 @@ export const sendEmail = async (options) => {
         htmlContent = forgotPasswordTemplate(
           options.data.name,
           options.data.resetUrl,
-          options.data.expiryTime
+          options.data.expiryTime,
+          options.data.otp
         );
         break;
       case "welcome":

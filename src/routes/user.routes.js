@@ -1,6 +1,8 @@
 import express from "express";
 import { isAuthenticated, isAdmin } from "../middleware/authMiddleware.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
+import { upload } from "../middleware/multer.js";
+
 import {
   getAllUsers,
   getUserById,
@@ -18,7 +20,7 @@ import {
 const router = express.Router();
 
 // Public routes
-router.get("/by-email", asyncHandler(getUserByEmail)); // Search by email (public)
+router.get("/by-email", asyncHandler(getUserByEmail));
 
 // Admin routes
 router.get("/", isAuthenticated, isAdmin, asyncHandler(getAllUsers));
@@ -32,8 +34,15 @@ router.get(
 );
 
 // User routes
+router.put(
+  "/:id",
+  isAuthenticated,
+  upload.single("image"),
+  asyncHandler(updateUser)
+);
+
+// Must be AFTER all specific routes
 router.get("/:id", asyncHandler(getUserById));
-router.put("/:id", isAuthenticated, asyncHandler(updateUser));
 
 // Admin only
 router.delete("/:id", isAuthenticated, isAdmin, asyncHandler(deleteUser));

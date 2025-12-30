@@ -6,15 +6,17 @@ import User from "../models/User.js";
 
 // Verify JWT Token
 export const isAuthenticated = asyncHandler(async (req, res, next) => {
-  const token =
-    req.cookies?.accessToken || req.headers.authorization?.split(" ")[1];
+  const authHeader = req.headers.authorization;
 
-  if (!token) {
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
     throw new ApiError("Please login to access this resource", 401);
   }
 
+  const token = authHeader.split(" ")[1];
+
   try {
     const decoded = jwt.verify(token, config.JWT_SECRET);
+
     req.user = await User.findById(decoded.id).select("-password");
 
     if (!req.user) {
@@ -22,7 +24,7 @@ export const isAuthenticated = asyncHandler(async (req, res, next) => {
     }
 
     next();
-  } catch (error) {
+  } catch (err) {
     throw new ApiError("Invalid or expired token", 401);
   }
 });
@@ -66,6 +68,27 @@ export const isAdmin = (req, res, next) => {
   }
   next();
 };
+// Optional authentication middleware
+export const optionalAuth = async (req, res, next) => {
+  const authHeader = req.headers.authorization;
+
+  // No token → guest user → continue
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return next();
+  }
+
+  try {
+    const token = authHeader.split(" ")[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    req.user = await User.findById(decoded.id).select("savedRooms role");
+  } catch (err) {
+    // Invalid token → still allow request
+    req.user = null;
+  }
+
+  next();
+};
 
 export default {
   isAuthenticated,
@@ -73,4 +96,5 @@ export default {
   isLandlordOrAdmin,
   isTenant,
   isAdmin,
+  optionalAuth,
 };

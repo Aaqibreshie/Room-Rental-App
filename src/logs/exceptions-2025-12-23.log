@@ -1,0 +1,26 @@
+2025-12-23 16:52:44 [ERROR]: uncaughtException: verifyJWT is not defined
+ReferenceError: verifyJWT is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/room.routes.js:91:42
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: verifyJWT is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/room.routes.js:91:42
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+2025-12-23 16:52:53 [ERROR]: uncaughtException: verifyJWT is not defined
+ReferenceError: verifyJWT is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/room.routes.js:91:42
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) 
+ReferenceError: verifyJWT is not defined
+    at file:///C:/Users/Asus/Desktop/room-rental-backend/src/routes/room.routes.js:91:42
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
