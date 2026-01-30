@@ -32,8 +32,11 @@ Roomify is a full-stack MERN application that helps students and individuals fin
 **Frontend**
 - React.js
 - React Router
-- Axios
-- CSS / Tailwind CSS
+- Cors
+- CSS
+- leaflet
+  
+  
 
 **Backend**
 - Node.js
@@ -42,6 +45,8 @@ Roomify is a full-stack MERN application that helps students and individuals fin
 - Mongoose
 - JWT
 - bcrypt
+- cloudinary
+- multer
 
 **Tools**
 - Git & GitHub
